@@ -1,45 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>¡Bienvenido!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Bienvenido a IDETEL!</title>
     <!-- Redirige a Instagram después de 30 segundos -->
     <meta http-equiv="refresh" content="30; url=https://www.instagram.com/idetel.internet?igsh=OWxlZWd0ZnVmbTFs">
     <style>
+        /* Paleta de colores basada en tu imagen (ajusta según necesites) */
+        :root {
+            --color-primario: #2A5CAA;  /* Azul similar al texto "MENOS CAIDAS" */
+            --color-secundario: #FF6B00; /* Naranja para acentos */
+            --color-fondo: #F0F5FF;      /* Fondo claro azulado */
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--color-fondo);
+            color: #333;
             text-align: center;
-            background-color: #f5f5f5;
-            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
+        
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        img {
-            max-width: 100%;
+        
+        h1 {
+            color: var(--color-primario);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        p.subtitle {
+            color: var(--color-secundario);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+        
+        img.publicidad {
+            width: 100%;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            border: 2px solid var(--color-primario);
         }
+        
         .countdown {
-            font-size: 18px;
-            color: #555;
+            font-size: 1rem;
+            color: var(--color-primario);
             margin-top: 20px;
+        }
+        
+        /* Efecto de "chip" para el texto similar a tu imagen */
+        .chip {
+            display: inline-block;
+            padding: 8px 15px;
+            background: var(--color-primario);
+            color: white;
+            border-radius: 20px;
+            margin: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem; }
+            .chip { font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>¡Gracias por conectarte!</h1>
-        <p>Disfruta de nuestra red WiFi.</p>
+        <h1>¡BIENVENIDO A IDETEL!</h1>
+        <p class="subtitle">Disfruta de nuestra red WiFi</p>
         
-        <!-- Imagen de publicidad (cambia "publicidad.jpg" por tu archivo) -->
-        <img src="publicidad.jpeg" alt="Oferta especial de IDETEL">
+        <!-- Texto estilo "chip" como en tu imagen -->
+        <div>
+            <span class="chip">MÁS VELOCIDAD</span>
+            <span class="chip">MENOS CAÍDAS</span>
+        </div>
         
-        <!-- Contador opcional -->
+        <!-- Imagen de publicidad (reemplaza con tu archivo) -->
+        <img class="publicidad" src="publicidad.jpg" alt="IDETEL Internet">
+        
+        <!-- Contador interactivo -->
         <p class="countdown">Redirigiendo a Instagram en <span id="timer">30</span> segundos...</p>
     </div>
 
-    <!-- Script para el contador (opcional) -->
+    <!-- Script para el contador -->
     <script>
         let seconds = 30;
         const timer = document.getElementById('timer');
