@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bienvenido</title>
-    <meta http-equiv="refresh" content="30; url=http://google.com" />
+    <title>¡Bienvenido!</title>
+    <!-- Redirige a Instagram después de 30 segundos -->
+    <meta http-equiv="refresh" content="30; url=https://www.instagram.com/idetel.internet?igsh=OWxlZWd0ZnVmbTFs">
     <style>
-        body { font-family: Arial; text-align: center; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .countdown {
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>¡Bienvenido a nuestra red!</h1>
-    <p>Por favor, espera 30 segundos mientras ves nuestro anuncio.</p>
-    <img src="https://media.giphy.com/media/ejemplo.gif" alt="Publicidad">
+    <div class="container">
+        <h1>¡Gracias por conectarte!</h1>
+        <p>Disfruta de nuestra red WiFi.</p>
+        
+        <!-- Imagen de publicidad (cambia "publicidad.jpg" por tu archivo) -->
+        <img src="publicidad.jpg" alt="Oferta especial de IDETEL">
+        
+        <!-- Contador opcional -->
+        <p class="countdown">Redirigiendo a Instagram en <span id="timer">30</span> segundos...</p>
+    </div>
+
+    <!-- Script para el contador (opcional) -->
+    <script>
+        let seconds = 30;
+        const timer = document.getElementById('timer');
+        setInterval(() => {
+            seconds--;
+            timer.textContent = seconds;
+            if (seconds <= 0) {
+                window.location.href = "https://www.instagram.com/idetel.internet?igsh=OWxlZWd0ZnVmbTFs";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
